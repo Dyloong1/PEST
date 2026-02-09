@@ -35,12 +35,12 @@ PEST/
 
 ### Resolution Reconstruction (Swin Spectral)
 ```bash
-python train_swin_spectral.py --config spectral --data_dir <JHU_DATA_PATH>
+python train_swin_spectral.py --config spectral_mid --data_dir <JHU_DATA_PATH>
 ```
 
 ### PDE Refiner
 ```bash
-python train_swin_dit_pde_refiner.py --config default --data_dir <JHU_DATA_PATH>
+python train_swin_dit_pde_refiner.py --config mid --data_dir <JHU_DATA_PATH>
 ```
 
 ### Autoregressive Evaluation

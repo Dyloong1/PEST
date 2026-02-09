@@ -58,7 +58,7 @@ DEFAULT_BATCH_SIZE = 1
 DEFAULT_LR = 0.001
 
 # Model configurations are loaded from _baseline_models via get_baseline_config()
-# Available sizes: small, default, large, xlarge
+# Available sizes: small, mid, large, xlarge
 AVAILABLE_MODELS = [
     'fno', 'ufno', 'tfno', 'transolver', 'dpot',
     'factformer', 'pino', 'deeponet', 'pi_deeponet'
@@ -477,8 +477,8 @@ def main():
                        help='Learning rate')
     parser.add_argument('--physics-weight', type=float, default=DEFAULT_PHYSICS_WEIGHT,
                        help='Weight for physics loss (for PI-DeepONet, PINO)')
-    parser.add_argument('--size', type=str, default='default',
-                       choices=['small', 'default', 'large', 'xlarge'],
+    parser.add_argument('--size', type=str, default='mid',
+                       choices=['small', 'mid', 'large', 'xlarge'],
                        help='Model size variant')
 
     args = parser.parse_args()

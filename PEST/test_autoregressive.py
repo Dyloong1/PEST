@@ -830,14 +830,14 @@ def main():
                         help='Path to model checkpoint')
     parser.add_argument('--model_type', type=str, required=True, choices=['swin', 'fno', 'dual_residual'],
                         help='Model type: swin, fno, or dual_residual')
-    parser.add_argument('--config_name', type=str, default='default',
+    parser.add_argument('--config_name', type=str, default='mid',
                         help='Config name for Swin models (legacy DNS)')
     parser.add_argument('--dns_config', type=str, default='baseline',
-                        choices=['baseline', 'baseline_v2', 'gradient', 'spectral', 'spectral_v2', 'spectral_gradient', 'lite', 'large'],
-                        help='DNS config name: baseline, baseline_v2, gradient, spectral, spectral_v2, spectral_gradient, etc.')
+                        choices=['baseline', 'baseline_v2', 'gradient', 'spectral_mid', 'spectral_v2', 'spectral_gradient', 'lite', 'large'],
+                        help='DNS config name: baseline, baseline_v2, gradient, spectral_mid, spectral_v2, spectral_gradient, etc.')
     parser.add_argument('--jhu_config', type=str, default='baseline',
                         choices=['baseline', 'physical', 'lite', 'full', 'large',
-                                 'spectral', 'spectral_high', 'spectral_band', 'dual_residual',
+                                 'spectral_mid', 'spectral_high', 'spectral_band', 'dual_residual',
                                  'curriculum', 'ns5x', 'spectral_progressive',
                                  'spectral_progressive_large', 'spectral_progressive_giant',
                                  'pde_refiner_large', 'pde_refiner_xl'],

@@ -8,7 +8,7 @@ This combines:
 - Sparse observation interpolation as prior
 
 Usage:
-    python train_swin_dit_pde_refiner.py --config default --epochs 150
+    python train_swin_dit_pde_refiner.py --config mid --epochs 150
 """
 
 import torch
@@ -38,8 +38,8 @@ def parse_args():
 
     # Model
     parser.add_argument('--config', type=str, default='giant',
-                        choices=['default', 'giant'],
-                        help='Model size: default(15M), giant(350M for 32GB GPU)')
+                        choices=['mid', 'giant'],
+                        help='Model size: mid(15M), giant(350M for 32GB GPU)')
 
     # Data
     parser.add_argument('--data_source', type=str, default='jhu',

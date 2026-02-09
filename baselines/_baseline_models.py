@@ -1537,67 +1537,67 @@ BASELINE_CONFIGS = {
 BASELINE_SIZE_CONFIGS = {
     'fno': {
         'small':   {'width': 20, 'num_layers': 3},
-        'default': {'width': 32, 'num_layers': 4},
+        'mid':     {'width': 32, 'num_layers': 4},
         'large':   {'width': 48, 'num_layers': 5},
         'xlarge':  {'width': 64, 'num_layers': 6},
     },
     'ufno': {
         'small':   {'base_width': 20},
-        'default': {'base_width': 32},
+        'mid':     {'base_width': 32},
         'large':   {'base_width': 48},
         'xlarge':  {'base_width': 64},
     },
     'tfno': {
         'small':   {'width': 48, 'num_layers': 4, 'rank': 12},
-        'default': {'width': 96, 'num_layers': 6, 'rank': 16},
+        'mid':     {'width': 96, 'num_layers': 6, 'rank': 16},
         'large':   {'width': 128, 'num_layers': 8, 'rank': 24},
         'xlarge':  {'width': 192, 'num_layers': 10, 'rank': 32},
     },
     'transolver': {
         'small':   {'dim': 192, 'depth': 4, 'num_slices': 32, 'num_heads': 6},
-        'default': {'dim': 384, 'depth': 8, 'num_slices': 64, 'num_heads': 12},
+        'mid':     {'dim': 384, 'depth': 8, 'num_slices': 64, 'num_heads': 12},
         'large':   {'dim': 512, 'depth': 12, 'num_slices': 96, 'num_heads': 16},
         'xlarge':  {'dim': 768, 'depth': 16, 'num_slices': 128, 'num_heads': 24},
     },
     'dpot': {
         'small':   {'dim': 192, 'depth': 6, 'modes': 12, 'num_heads': 6},
-        'default': {'dim': 384, 'depth': 12, 'modes': 16, 'num_heads': 12},
+        'mid':     {'dim': 384, 'depth': 12, 'modes': 16, 'num_heads': 12},
         'large':   {'dim': 512, 'depth': 16, 'modes': 20, 'num_heads': 16},
         'xlarge':  {'dim': 768, 'depth': 20, 'modes': 24, 'num_heads': 24},
     },
     'factformer': {
         'small':   {'dim': 160, 'depth': 6, 'num_heads': 5},
-        'default': {'dim': 320, 'depth': 10, 'num_heads': 10},
+        'mid':     {'dim': 320, 'depth': 10, 'num_heads': 10},
         'large':   {'dim': 448, 'depth': 14, 'num_heads': 14},
         'xlarge':  {'dim': 640, 'depth': 18, 'num_heads': 20},
     },
     'pino': {
         'small':   {'width': 20, 'num_layers': 3},
-        'default': {'width': 32, 'num_layers': 4},
+        'mid':     {'width': 32, 'num_layers': 4},
         'large':   {'width': 48, 'num_layers': 5},
         'xlarge':  {'width': 64, 'num_layers': 6},
     },
     'deeponet': {
         'small':   {'branch_dim': 16, 'trunk_dim': 64, 'basis_dim': 32},
-        'default': {'branch_dim': 32, 'trunk_dim': 128, 'basis_dim': 64},
+        'mid':     {'branch_dim': 32, 'trunk_dim': 128, 'basis_dim': 64},
         'large':   {'branch_dim': 64, 'trunk_dim': 256, 'basis_dim': 128},
         'xlarge':  {'branch_dim': 96, 'trunk_dim': 384, 'basis_dim': 192},
     },
     'pi_deeponet': {
         'small':   {'branch_dim': 16, 'trunk_dim': 64, 'basis_dim': 32},
-        'default': {'branch_dim': 32, 'trunk_dim': 128, 'basis_dim': 64},
+        'mid':     {'branch_dim': 32, 'trunk_dim': 128, 'basis_dim': 64},
         'large':   {'branch_dim': 64, 'trunk_dim': 256, 'basis_dim': 128},
         'xlarge':  {'branch_dim': 96, 'trunk_dim': 384, 'basis_dim': 192},
     },
 }
 
 
-def get_baseline_config(model_name, size='default'):
+def get_baseline_config(model_name, size='mid'):
     """Get baseline model config with specified size.
 
     Args:
         model_name: One of the keys in BASELINE_CONFIGS
-        size: 'small', 'default', 'large', or 'xlarge'
+        size: 'small', 'mid', 'large', or 'xlarge'
 
     Returns:
         Config dict with 'class', 'params', etc.

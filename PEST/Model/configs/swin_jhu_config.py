@@ -956,7 +956,7 @@ JHU_SWIN_CONFIGS = {
     'lite': SwinJHUConfigLite,
     'full': SwinJHUConfigFull,
     'large': SwinJHUConfigLarge,
-    'spectral': SwinJHUConfigSpectral,
+    'spectral_mid': SwinJHUConfigSpectral,
     'spectral_high': SwinJHUConfigSpectralHigh,
     'spectral_band': SwinJHUConfigSpectralBand,
     'spectral_progressive': SwinJHUConfigSpectralProgressive,

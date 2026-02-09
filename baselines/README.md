@@ -35,13 +35,13 @@ python evaluate_per_timestep.py --checkpoint_dir <DIR>
 
 ## Model Size Variants
 
-Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
+Each model provides 4 size configs: `small`, `mid`, `large`, `xlarge`.
 
 ### Spectral Methods (FNO / PINO)
 | Size | width | num_layers |
 |------|-------|------------|
 | `small` | 20 | 3 |
-| `default` | 32 | 4 |
+| `mid` | 32 | 4 |
 | `large` | 48 | 5 |
 | `xlarge` | 64 | 6 |
 
@@ -49,7 +49,7 @@ Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
 | Size | base_width |
 |------|------------|
 | `small` | 20 |
-| `default` | 32 |
+| `mid` | 32 |
 | `large` | 48 |
 | `xlarge` | 64 |
 
@@ -57,7 +57,7 @@ Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
 | Size | width | num_layers | rank |
 |------|-------|------------|------|
 | `small` | 48 | 4 | 12 |
-| `default` | 96 | 6 | 16 |
+| `mid` | 96 | 6 | 16 |
 | `large` | 128 | 8 | 24 |
 | `xlarge` | 192 | 10 | 32 |
 
@@ -65,7 +65,7 @@ Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
 | Size | dim | depth | num_slices | num_heads |
 |------|-----|-------|------------|-----------|
 | `small` | 192 | 4 | 32 | 6 |
-| `default` | 384 | 8 | 64 | 12 |
+| `mid` | 384 | 8 | 64 | 12 |
 | `large` | 512 | 12 | 96 | 16 |
 | `xlarge` | 768 | 16 | 128 | 24 |
 
@@ -73,7 +73,7 @@ Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
 | Size | dim | depth | modes | num_heads |
 |------|-----|-------|-------|-----------|
 | `small` | 192 | 6 | 12 | 6 |
-| `default` | 384 | 12 | 16 | 12 |
+| `mid` | 384 | 12 | 16 | 12 |
 | `large` | 512 | 16 | 20 | 16 |
 | `xlarge` | 768 | 20 | 24 | 24 |
 
@@ -81,7 +81,7 @@ Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
 | Size | dim | depth | num_heads |
 |------|-----|-------|-----------|
 | `small` | 160 | 6 | 5 |
-| `default` | 320 | 10 | 10 |
+| `mid` | 320 | 10 | 10 |
 | `large` | 448 | 14 | 14 |
 | `xlarge` | 640 | 18 | 20 |
 
@@ -89,6 +89,6 @@ Each model provides 4 size configs: `small`, `default`, `large`, `xlarge`.
 | Size | branch_dim | trunk_dim | basis_dim |
 |------|------------|-----------|-----------|
 | `small` | 16 | 64 | 32 |
-| `default` | 32 | 128 | 64 |
+| `mid` | 32 | 128 | 64 |
 | `large` | 64 | 256 | 128 |
 | `xlarge` | 96 | 384 | 192 |

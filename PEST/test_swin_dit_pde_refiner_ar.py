@@ -547,7 +547,7 @@ def main():
     parser.add_argument('--checkpoint', type=str, required=True,
                         help='Path to model checkpoint')
     parser.add_argument('--config', type=str, default='giant',
-                        choices=['default', 'giant',
+                        choices=['mid', 'giant',
                                  'spectral_progressive_large', 'spectral_progressive_giant'],
                         help='Model configuration: giant for swin_dit, spectral_progressive_large/giant for swin_patched')
     parser.add_argument('--model_type', type=str, default='swin_dit',

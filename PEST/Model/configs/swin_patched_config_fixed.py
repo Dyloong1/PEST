@@ -633,7 +633,7 @@ DNS_SWIN_CONFIGS = {
     'baseline': SwinPatchedConfigFixed,
     'baseline_v2': SwinDNSConfigBaselineV2,
     'gradient': SwinDNSConfigGradient,
-    'spectral': SwinDNSConfigSpectral,
+    'spectral_mid': SwinDNSConfigSpectral,
     'spectral_v2': SwinDNSConfigSpectralV2,
     'spectral_gradient': SwinDNSConfigSpectralGradient,
     'unet': SwinDNSConfigUNet,
@@ -651,7 +651,7 @@ def get_dns_swin_config(config_name: str = 'baseline'):
     获取DNS Swin配置
 
     Args:
-        config_name: 配置名称 ('baseline', 'lite', 'large', 'spectral')
+        config_name: 配置名称 ('baseline', 'lite', 'large', 'spectral_mid')
 
     Returns:
         配置实例

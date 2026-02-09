@@ -30,7 +30,7 @@ Each Swin model provides multiple size configs for ablation or resource-constrai
 |-------------|-----------|--------|
 | `spectral_tiny` | 192 | [2,2,2] |
 | `spectral_small` | 272 | [2,4,2] |
-| `spectral` (base) | 384 | [2,6,2] |
+| `spectral_mid` | 384 | [2,6,2] |
 | `spectral_large` | 512 | [2,8,4] |
 
 ```bash
@@ -41,7 +41,7 @@ python train_swin_spectral.py --config spectral_small --data_dir <DATA_PATH>
 | Config Name | EMBED_DIM | DEPTHS |
 |-------------|-----------|--------|
 | `small` | 160 | [2,2,4,2] |
-| `default` (base) | 224 | [2,2,8,2] |
+| `mid` | 224 | [2,2,8,2] |
 | `large` | 320 | [2,4,12,2] |
 | `xlarge` | 448 | [2,6,18,2] |
 

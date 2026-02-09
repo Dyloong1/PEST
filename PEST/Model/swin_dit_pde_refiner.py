@@ -743,11 +743,11 @@ class SwinDiTPDERefinerConfig:
         self.NS_WEIGHT = 1e-5
 
 
-def get_swin_dit_pde_refiner_config(name: str = 'default', data_source: str = 'jhu') -> SwinDiTPDERefinerConfig:
+def get_swin_dit_pde_refiner_config(name: str = 'mid', data_source: str = 'jhu') -> SwinDiTPDERefinerConfig:
     """Get configuration by name and data source.
 
     Args:
-        name: Model size ('small', 'default', 'large', 'xlarge', 'giant')
+        name: Model size ('small', 'mid', 'large', 'xlarge', 'giant')
         data_source: 'jhu' (128x128x128) or 'dns' (64x128x128)
     """
     config = SwinDiTPDERefinerConfig()
@@ -761,7 +761,7 @@ def get_swin_dit_pde_refiner_config(name: str = 'default', data_source: str = 'j
         config.DEPTHS = [2, 2, 4, 2]
         config.NUM_HEADS = [5, 5, 5, 5]
         config.REFINER_HIDDEN = 48
-    elif name == 'default':
+    elif name == 'mid':
         pass
     elif name == 'large':
         config.EMBED_DIM = 320
@@ -785,7 +785,7 @@ def get_swin_dit_pde_refiner_config(name: str = 'default', data_source: str = 'j
 if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    config = get_swin_dit_pde_refiner_config('default')
+    config = get_swin_dit_pde_refiner_config('mid')
     model = SwinDiTPDERefiner(config).to(device)
 
     B = 1
