@@ -1,6 +1,6 @@
 # PEST: Physics-Enhanced Swin Transformer for 3D Turbulence Simulation
 
-This repository is the official implementation for [PEST](https://arxiv.org/pdf/2601.14517).
+This repository is the official implementation for [PEST](https://arxiv.org/abs/2602.10150).
 
 <img src="architecture.png" alt="architecture" width="100%">
 
