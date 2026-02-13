@@ -21,7 +21,7 @@ code_public/
 
 ## Quick Guide
 
-- **`PEST/`** contains the complete PEST ablation with two modules: resolution reconstruction (Swin Transformer + spectral loss) and plug-in PDE Refiner (Swin-DiT, K=3 diffusion steps). See `PEST/README.md` for training and evaluation commands. For the plug-in refinement design, refer to **Appendix H** in the paper. Remove the sparse residual connection to obtain the base PEST.
+- **`PEST/`** contains the complete PEST ablation with two modules: optional resolution reconstruction (PEST + sparse groundtruth) and plug-in PDE Refiner (PEST + diffusion, K=3 diffusion steps). See `PEST/README.md` for training and evaluation commands. For the plug-in refinement design, refer to **Appendix H** in the paper. Remove the sparse residual connection to obtain the base PEST.
 
 - **`baselines/`** contains 9 unified baseline implementations. All models share the same data pipeline and evaluation protocol. See `baselines/README.md` for the full list and usage.
 
@@ -29,7 +29,7 @@ code_public/
 
 Each Swin model provides multiple size configs for ablation or resource-constrained environments:
 
-### Resolution Reconstruction (Swin Spectral)
+### Resolution Reconstruction (PEST + sparse DNS solution)
 | Config Name | EMBED_DIM | DEPTHS |
 |-------------|-----------|--------|
 | `spectral_tiny` | 192 | [2,2,2] |
@@ -41,7 +41,7 @@ Each Swin model provides multiple size configs for ablation or resource-constrai
 python train_swin_spectral.py --config spectral_small --data_dir <DATA_PATH>
 ```
 
-### PDE Refiner (Swin-DiT)
+### PDE Refiner (PEST)
 | Config Name | EMBED_DIM | DEPTHS |
 |-------------|-----------|--------|
 | `small` | 160 | [2,2,4,2] |
