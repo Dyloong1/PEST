@@ -14,7 +14,7 @@ https://drive.google.com/drive/folders/1M6GJl8dGodToLKJYaNvJzglKoWMdhrkX?usp=dri
 
 ```
 code_public/
-├── PEST/           # PEST full ablation (resolution reconstruction + PDE Refiner)
+├── PEST/           # PEST full ablation (available plug-ins: resolution reconstruction + PDE Refiner)
 ├── baselines/      # 9 baseline models (FNO, UFNO, TFNO, Transolver, FactFormer, DPOT, DeepONet, PI-DeepONet, PINO)
 └── README.md
 ```
