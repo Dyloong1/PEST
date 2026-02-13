@@ -21,7 +21,7 @@ code_public/
 
 ## Quick Guide
 
-- **`PEST/`** contains the complete PEST ablation with two modules: optional resolution reconstruction (PEST + sparse groundtruth) and plug-in PDE Refiner (PEST + diffusion, K=3 diffusion steps). See `PEST/README.md` for training and evaluation commands. For the plug-in refinement design, refer to **Appendix H** in the paper. Remove the sparse residual connection to obtain the base PEST.
+- **`PEST/`** contains the complete PEST ablation with two modules: optional resolution reconstruction (PEST + sparse groundtruth) and plug-in PDE Refiner (PEST + diffusion, K=3 diffusion steps). See `PEST/README.md` for training and evaluation commands. For the plug-in refinement design, refer to **Appendix H** in the paper. From the vanilla Swin Transformer to the full version with both plug-in refinement methods, each component is modular and incrementally stacked—including various loss terms and other design choices—with a complete ablation study covering every stage.
 
 - **`baselines/`** contains 9 unified baseline implementations. All models share the same data pipeline and evaluation protocol. See `baselines/README.md` for the full list and usage.
 
